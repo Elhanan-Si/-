@@ -225,24 +225,3 @@ footer, header {
         opacity: 1;
     }
 }
-
-
-/* עיצוב רספונסיבי */
-@media (max-width: 768px) {
-    .buttons {
-        gap: 10px;
-    }
-
-    .btn-link {
-        font-size: 14px;
-        padding: 12px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .btn-link {
-        font-size: 12px;
-        padding: 10px 20px;
-        width: 90%;
-    }
-}
