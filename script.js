@@ -20,15 +20,15 @@ function createButtonElement(name, link, timeIsOpen) {
 }
 
 const buttonsList = [
-    {name: "כפתור 1", link: "https://forms.office.com/r/9GppyZmPLV", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 2", link: "#", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 3", link: "#", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 4", link: "#", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 5", link: "#", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 6", link: "#", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 7", link: "#", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 8", link: "#", timeIsOpen: "10:00 - 12:00"},
-    {name: "כפתור 9", link: "#", timeIsOpen: "10:00 - 12:00"}
+    {name: "נשקייה", link: "https://forms.office.com/r/b4fngmSSf4", timeIsOpen: "10:00 - 12:00"},
+    {name: "בונקר", link: "https://forms.office.com/r/nEahdNF5Ez", timeIsOpen: "10:00 - 12:00"},
+    {name: "נקודת גדר צפונית", link: "https://forms.office.com/r/ZNqHfmzCuw", timeIsOpen: "10:00 - 12:00"},
+    {name: "עמדת ש.ג. ראשי", link: "https://forms.office.com/r/sJ04DACwU9", timeIsOpen: "10:00 - 12:00"},
+    {name: "עמדת נשקייה", link: "https://forms.office.com/r/wkJtvG0SdW", timeIsOpen: "10:00 - 12:00"},
+    {name: "עמדת בונקר", link: "https://forms.office.com/r/6wEsMQNW7z", timeIsOpen: "10:00 - 12:00"},
+    {name: "עמדת ש.ג. דרומי", link: "https://forms.office.com/r/R0STUyAML3", timeIsOpen: "10:00 - 12:00"},
+    {name: "עמדת מערבי", link: "https://forms.office.com/r/Dde878EG14", timeIsOpen: "10:00 - 12:00"},
+    {name: "עמדת מזרחי", link: "https://forms.office.com/r/HeJHCf4ssL", timeIsOpen: "10:00 - 12:00"}
 ]
 
 buttonsList.forEach((button) => {
