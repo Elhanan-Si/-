@@ -1,0 +1,248 @@
+/* הגדרת סגנונות כלליים */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* עיצוב הרוט של הדף */
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    max-width: 1200px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* עיצוב הכותרת */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+
+.main-title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+/* הוספת קו תחתון */
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #007bff; 
+    border-radius: 2px;
+}
+
+
+/* עיצוב הקטע של הכפתורים */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* עיצוב הכפתור */
+.btn-link {
+    background-color: #26496e;
+    color: #fff;
+    width: 120px;
+    height: 120px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    letter-spacing: 1px;
+}
+
+/* אנימציה על הכפתור בזמן hover */
+.btn-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* אפקט של לחיצה */
+.btn-link:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.p-times {
+    font-size: 14px; /* גודל טקסט קטן יותר */
+    color: #777; /* צבע אפור רך */
+    margin-top: 10px; /* רווח מעל */
+    margin-bottom: 20px;
+    font-weight: 400; /* משקל טקסט קל */
+    text-align: center; /* מיישר את הטקסט למרכז */
+    transition: color 0.3s ease, transform 0.3s ease; /* מעבר צבע רך כאשר יש אינטראקציה */
+}
+
+/* הוספת אנימציה כאשר הכפתור נמצא במצב hover */
+.btn-link:hover .p-times {
+    color: #007bff; /* שינוי צבע הטקסט לכחול */
+    transform: translateY(-5px); /* הזזת הטקסט מעט למעלה */
+}
+
+/* אפשרות לשנות את הצבע גם ב-:active (לחיצה) */
+.btn-link:active .p-times {
+    color: #0056b3; /* צבע כהה יותר בלחיצה */
+    transform: translateY(0); /* החזרת הטקסט למקום */
+}
+
+/* עיצוב הקישורים בתוך הכפתורים */
+.a-link-btn {
+    text-decoration: none;
+}
+
+/* עיצוב הרגל (footer) */
+footer, header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+}
+
+/* אנימציות כשהכפתורים נטענים */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-link {
+    animation: fadeIn 0.5s ease-out;
+}
+
+
+
+/* עיצוב לחלון הצף */
+.popup {
+    display: none; /* ברירת מחדל, החלון לא מוצג */
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 90%;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5); /* רקע כהה שקוף */
+    z-index: 9999; /* מוודא שהחלון יהיה מעל כל התוכן */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* כפתור סגירה */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* תוכן החלון */
+.popup-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* מונע גלילה בתוך התוכן */
+}
+
+/* עיצוב ה-iframe */
+.popup-iframe {
+    width: 100%;
+    height: 80vh;
+}
+
+.popup-title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+/* אנימציה לפתיחת החלון */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* עיצוב רספונסיבי */
+@media (max-width: 768px) {
+    .buttons {
+        gap: 10px;
+    }
+
+    .btn-link {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-link {
+        font-size: 12px;
+        padding: 10px 20px;
+        width: 90%;
+    }
+}
